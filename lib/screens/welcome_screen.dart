@@ -44,9 +44,7 @@ class WelcomeScreen extends StatelessWidget {
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height / 2.666,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF674AEF)
-                ),
+                decoration: const BoxDecoration(color: Color(0xFF674AEF)),
               ),
             ),
             Align(
@@ -56,11 +54,10 @@ class WelcomeScreen extends StatelessWidget {
                 height: MediaQuery.of(context).size.height / 2.666,
                 padding: const EdgeInsets.only(top: 40, bottom: 30),
                 decoration: const BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(70),
-                  )
-                ),
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(70),
+                    )),
                 child: Column(
                   children: [
                     const Text(
@@ -82,17 +79,18 @@ class WelcomeScreen extends StatelessWidget {
                           fontSize: 17,
                           color: Colors.black,
                         ),
-                      ), 
+                      ),
                     ),
                     const SizedBox(height: 60),
                     Material(
                       color: const Color(0xFF674AEF),
                       borderRadius: BorderRadius.circular(10),
                       child: InkWell(
-                        onTap: (){
-                          Navigator.push(context,
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => HomePage(),
                             ),
                           );
                         },
@@ -120,7 +118,6 @@ class WelcomeScreen extends StatelessWidget {
           ],
         ),
       ),
-
     );
   }
 }

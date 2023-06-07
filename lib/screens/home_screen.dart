@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:eskul_project/screens/staff_screen.dart';
 import 'package:eskul_project/screens/pages.dart';
 import 'package:eskul_project/screens/administrator_screen.dart';
+
 // ignore: use_key_in_widget_constructors
 class HomePage extends StatelessWidget {
   @override
@@ -79,30 +80,6 @@ class HomePage extends StatelessWidget {
               children: [
                 Stack(
                   children: [
-                    // Container(
-                    //   width: MediaQuery.of(context).size.width,
-                    //   height: MediaQuery.of(context).size.height / 4.5,
-                    //   decoration: const BoxDecoration(
-                    //     color: Colors.white,
-                    //   ),
-                    // ),
-                    // Container(
-                    //   width: MediaQuery.of(context).size.width,
-                    //   height: MediaQuery.of(context).size.height / 4.5,
-                    //   decoration: const BoxDecoration(
-                    //     color: Color(0xFF674AEF),
-                    //     borderRadius: BorderRadius.only(
-                    //       bottomRight: Radius.circular(70),
-                    //     ),
-                    //   ),
-                    //   child: Center(
-                    //     child: Image.asset(
-                    //       "images/student.png",
-                    //       scale: 0.8,
-                    //     ),
-                    //   ),
-                    // ),
-
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
@@ -184,7 +161,8 @@ class HomePage extends StatelessWidget {
                                     context,
                                     MaterialPageRoute(
                                       //must be redirected to payment page before the login
-                                      builder: (context) => const DocumentsCls(),
+                                      builder: (context) =>
+                                          const DocumentsCls(),
                                     ),
                                   );
                                 },
@@ -210,42 +188,48 @@ class HomePage extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 100, right: 20, top: 40),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => const AdministratorPage()),
-                                          );
-                                        },
-                                        child: const Text('Administrator',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            letterSpacing: 1,
-                                            fontStyle: FontStyle.italic,
-                                            color: Color(0xFF674AEF),
-                                          ),
-                                        ),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AdministratorPage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      'Administrator',
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        letterSpacing: 1,
+                                        fontStyle: FontStyle.italic,
+                                        color: Color(0xFF674AEF),
                                       ),
+                                    ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 30, right: 20, top: 40),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => const StaffPage()),
-                                          );
-                                        },
-                                        child: const Text('Staff',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            letterSpacing: 1,
-                                            fontStyle: FontStyle.italic,
-                                            color: Color(0xFF674AEF),
-                                          ),
-                                        ),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const StaffPage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      'Staff',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        letterSpacing: 1,
+                                        fontStyle: FontStyle.italic,
+                                        color: Color(0xFF674AEF),
                                       ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             )

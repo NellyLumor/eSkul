@@ -118,7 +118,7 @@ class _DocumentsClsState extends State<DocumentsCls> {
                               height: 20,
                             ),
                             Card(
-                              shadowColor: Colors.black,
+                              shadowColor: Colors.black, 
                               color: Colors.blueGrey[50],
                               child: SizedBox(
                                 width: 350,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:eskul_project/screens/staff_screen.dart';
-import 'package:eskul_project/screens/pages.dart';
+import 'package:eskul_project/screens/alert.dart';
 import 'package:eskul_project/screens/administrator_screen.dart';
 
 // ignore: use_key_in_widget_constructors
@@ -157,12 +157,10 @@ class HomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(10),
                               child: InkWell(
                                 onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      //must be redirected to payment page before the login
-                                      builder: (context) =>
-                                          const DocumentsCls(),
+                                  showDialog(
+                                    context: context, 
+                                    builder: (context) => const AlertDialog(
+                                      content: CustomDialog(),
                                     ),
                                   );
                                 },
@@ -193,8 +191,9 @@ class HomePage extends StatelessWidget {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                const AdministratorPage()),
+                                          builder: (context) =>
+                                          const AdministratorPage(),
+                                        ),
                                       );
                                     },
                                     child: const Text(
@@ -216,8 +215,9 @@ class HomePage extends StatelessWidget {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) =>
-                                                const StaffPage()),
+                                          builder: (context) =>
+                                          const StaffPage(),
+                                        ),
                                       );
                                     },
                                     child: const Text(

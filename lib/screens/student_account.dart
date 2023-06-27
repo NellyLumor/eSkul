@@ -68,15 +68,16 @@ class _StudentAccountState extends State<StudentAccount> {
                   ),
                   child: TextFormField(
                     decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Search Here...",
-                        hintStyle: TextStyle(
-                          color: Color.fromRGBO(0, 0, 0, 0.5),
-                        ),
-                        prefixIcon: Icon(
-                          Icons.search,
-                          size: 25,
-                        )),
+                      border: InputBorder.none,
+                      hintText: "Search Here...",
+                      hintStyle: TextStyle(
+                        color: Color.fromRGBO(0, 0, 0, 0.5),
+                      ),
+                      prefixIcon: Icon(
+                        Icons.search,
+                        size: 25,
+                      ),
+                    ),
                   ),
                 )
               ],

@@ -13,21 +13,21 @@ class StaffAccount extends StatefulWidget {
 class _StaffAccountState extends State<StaffAccount> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: ListView(
         children: [
           Container(
-            // ignore: prefer_const_constructors
-            padding: EdgeInsets.only(top: 15, right: 15, left: 15, bottom: 10),
+            padding:
+                const EdgeInsets.only(top: 15, right: 15, left: 15, bottom: 10),
             decoration: const BoxDecoration(
               color: Color(0xFF674AEF),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Icon(
                       Icons.dashboard,
                       size: 30,
@@ -178,7 +178,8 @@ class _StaffAccountState extends State<StaffAccount> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const StaffAccount(),
+                                      builder: (context) =>
+                                          const StaffAccount(),
                                     ),
                                   );
                                 },
@@ -204,42 +205,47 @@ class _StaffAccountState extends State<StaffAccount> {
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 100, right: 20, top: 40),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => const AdministratorPage()),
-                                          );
-                                        },
-                                        child: const Text('Administrator',
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            letterSpacing: 1,
-                                            fontStyle: FontStyle.italic,
-                                            color: Color(0xFF674AEF),
-                                          ),
-                                        ),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                const AdministratorPage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      'Administrator',
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        letterSpacing: 1,
+                                        fontStyle: FontStyle.italic,
+                                        color: Color(0xFF674AEF),
                                       ),
+                                    ),
+                                  ),
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 30, right: 20, top: 40),
-                                      child: GestureDetector(
-                                        onTap: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(builder: (context) => HomePage()),
-                                          );
-                                        },
-                                        child: const Text('Student',
-                                          style: TextStyle(
-                                            fontSize: 16,
-                                            letterSpacing: 1,
-                                            fontStyle: FontStyle.italic,
-                                            color: Color(0xFF674AEF),
-                                          ),
-                                        ),
+                                  child: GestureDetector(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => HomePage()),
+                                      );
+                                    },
+                                    child: const Text(
+                                      'Student',
+                                      style: TextStyle(
+                                        fontSize: 16,
+                                        letterSpacing: 1,
+                                        fontStyle: FontStyle.italic,
+                                        color: Color(0xFF674AEF),
                                       ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             )
